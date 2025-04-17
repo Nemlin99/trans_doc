@@ -1,0 +1,9 @@
+streamlit
+PyPDF2
+python-docx
+pdf2image
+Pillow
+easyocr
+numpy
+torch
+torchvision
