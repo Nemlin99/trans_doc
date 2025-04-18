@@ -7,8 +7,7 @@ from docx import Document
 from pdf2image import convert_from_bytes
 from PIL import Image
 import io
-import easyocr
-import numpy as np
+import easyocr import numpy as np
 import re
 
 # ⚙️ Configuration de la page
@@ -33,10 +32,10 @@ def extract_native_text(pdf_file):
             full_text += text + "\n"
     return full_text.strip()
 
-# 👁️ Extraction OCR des images du PDF
+#  Extraction OCR des images du PDF
 def extract_text_with_ocr_images(pdf_bytes):
     images = convert_from_bytes(pdf_bytes)
-    reader = easyocr.Reader(['fr'], gpu=False)  # Remets à True si tu as une carte GPU
+    reader = easyocr.Reader(['fr'], gpu=False)  
     full_text = ""
     for img in images:
         img_rgb = img.convert("RGB")
