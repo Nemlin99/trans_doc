@@ -82,6 +82,4 @@ def main():
                     mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                 )
 
-# Si exécuté directement
-if __name__ == "__main__":
-    main()
+
