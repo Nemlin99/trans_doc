@@ -51,12 +51,12 @@ if uploaded_file:
         with st.spinner("⏳ Extraction du texte natif..."):
             native_text = extract_native_text(uploaded_file)
 
-        uploaded_file.seek(0)  # Remise à zéro du fichier pour l’OCR
-        with st.spinner("🔍 Analyse OCR des images..."):
-            ocr_text = extract_text_with_ocr_images(uploaded_file.read())
+        #uploaded_file.seek(0)  # Remise à zéro du fichier pour l’OCR
+        #with st.spinner("🔍 Analyse OCR des images..."):
+            #ocr_text = extract_text_with_ocr_images(uploaded_file.read())
 
         # Fusion des deux extractions
-        combined_text = native_text + "\n\n" + ocr_text if ocr_text else native_text
+        combined_text = native_text #+ "\n\n" + ocr_text if ocr_text else native_text
 
         if not combined_text.strip():
             st.warning("⚠️ Aucun texte trouvé dans le document.")
