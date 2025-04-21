@@ -7,7 +7,8 @@ from docx import Document
 from pdf2image import convert_from_bytes
 from PIL import Image
 import io
-import easyocr import numpy as np
+import easyocr 
+import numpy as np
 import re
 
 # ⚙️ Configuration de la page
